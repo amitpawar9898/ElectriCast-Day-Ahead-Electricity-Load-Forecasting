@@ -1,0 +1,482 @@
+{
+  "generated_at": "2026-10-23T23:08:56+05:30",
+  "protocol": {
+    "folds": "expanding window with train_start fixed at the earliest valid target hour (2016-12-14 21:00 IST); five scoring folds test Jun, Jul, Aug, Sep-Nov and Dec 2017; May-Jun 2018 is a stress test excluded from every fold mean",
+    "evaluation_mask": "target present and seasonal_naive_24 available",
+    "config": "untuned forecast_model.DEFAULT_PARAMS, identical across variants",
+    "feature_options": "drop month and day-of-year only when the training window is shorter than 365 days (the 9.3 rule); the 2018 stress test therefore keeps the full calendar",
+    "target_scale": "mean of the un-filled target over the 168 h ending 1 h before each day's 00:00 IST origin; constant within the day; days with fewer than 24 observed hours get no scale and no forecast",
+    "near_zero_fraction": "share of reporting stable-panel apartments below 100 Wh in an hour, used at a 24 h lag",
+    "comparison_mask": "evaluation mask intersected with both models' forecasts so MAE differences are not caused by different coverage",
+    "decision_rule": "adopt a normalized variant only if it lowers common-hours MAE on at least 3 of 5 scoring folds"
+  },
+  "config": {
+    "n_estimators": 400,
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "min_child_weight": 8,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 2.0,
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "folds": [
+    {
+      "id": "2017-06",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 720,
+      "drop_annual_calendar": true,
+      "scale_days": 30,
+      "test_days": 30,
+      "scale_min_wh": 345.6415,
+      "scale_max_wh": 479.6455,
+      "variants": {
+        "raw_9_3_winner": {
+          "n": 720,
+          "MAE": 73.5967,
+          "RMSE": 95.8031,
+          "bias": 8.8286,
+          "common_hours_with_reference": 720,
+          "reference_MAE_on_pair_common_wh": 73.5967,
+          "delta_MAE_vs_winner_wh": null,
+          "normalized": false,
+          "near_zero": false,
+          "n_train": 2543
+        },
+        "normalized": {
+          "n": 720,
+          "MAE": 91.0601,
+          "RMSE": 118.6442,
+          "bias": 42.543,
+          "common_hours_with_reference": 720,
+          "reference_MAE_on_pair_common_wh": 73.5967,
+          "delta_MAE_vs_winner_wh": 17.4634,
+          "normalized": true,
+          "near_zero": false,
+          "n_train": 2516,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 2516,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 366.4844,
+            "predicted_hours": 720,
+            "missing_scale_hours": 0
+          }
+        },
+        "normalized_near_zero": {
+          "n": 720,
+          "MAE": 88.687,
+          "RMSE": 115.567,
+          "bias": 36.1152,
+          "common_hours_with_reference": 720,
+          "reference_MAE_on_pair_common_wh": 73.5967,
+          "delta_MAE_vs_winner_wh": 15.0903,
+          "normalized": true,
+          "near_zero": true,
+          "n_train": 2516,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 2516,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 366.4844,
+            "predicted_hours": 720,
+            "missing_scale_hours": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "2017-07",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 744,
+      "drop_annual_calendar": true,
+      "scale_days": 31,
+      "test_days": 31,
+      "scale_min_wh": 320.1153,
+      "scale_max_wh": 431.1165,
+      "variants": {
+        "raw_9_3_winner": {
+          "n": 744,
+          "MAE": 63.686,
+          "RMSE": 84.9989,
+          "bias": 4.5345,
+          "common_hours_with_reference": 744,
+          "reference_MAE_on_pair_common_wh": 63.686,
+          "delta_MAE_vs_winner_wh": null,
+          "normalized": false,
+          "near_zero": false,
+          "n_train": 3263
+        },
+        "normalized": {
+          "n": 744,
+          "MAE": 67.1079,
+          "RMSE": 89.8467,
+          "bias": -13.9295,
+          "common_hours_with_reference": 744,
+          "reference_MAE_on_pair_common_wh": 63.686,
+          "delta_MAE_vs_winner_wh": 3.4219,
+          "normalized": true,
+          "near_zero": false,
+          "n_train": 3236,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 3236,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 380.6278,
+            "predicted_hours": 744,
+            "missing_scale_hours": 0
+          }
+        },
+        "normalized_near_zero": {
+          "n": 744,
+          "MAE": 66.2784,
+          "RMSE": 89.7128,
+          "bias": -16.1603,
+          "common_hours_with_reference": 744,
+          "reference_MAE_on_pair_common_wh": 63.686,
+          "delta_MAE_vs_winner_wh": 2.5924,
+          "normalized": true,
+          "near_zero": true,
+          "n_train": 3236,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 3236,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 380.6278,
+            "predicted_hours": 744,
+            "missing_scale_hours": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "2017-08",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 744,
+      "drop_annual_calendar": true,
+      "scale_days": 31,
+      "test_days": 31,
+      "scale_min_wh": 340.1024,
+      "scale_max_wh": 387.311,
+      "variants": {
+        "raw_9_3_winner": {
+          "n": 744,
+          "MAE": 59.3857,
+          "RMSE": 79.5273,
+          "bias": -12.4457,
+          "common_hours_with_reference": 744,
+          "reference_MAE_on_pair_common_wh": 59.3857,
+          "delta_MAE_vs_winner_wh": null,
+          "normalized": false,
+          "near_zero": false,
+          "n_train": 4007
+        },
+        "normalized": {
+          "n": 744,
+          "MAE": 62.8353,
+          "RMSE": 85.2327,
+          "bias": -22.0392,
+          "common_hours_with_reference": 744,
+          "reference_MAE_on_pair_common_wh": 59.3857,
+          "delta_MAE_vs_winner_wh": 3.4496,
+          "normalized": true,
+          "near_zero": false,
+          "n_train": 3980,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 3980,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 378.8205,
+            "predicted_hours": 744,
+            "missing_scale_hours": 0
+          }
+        },
+        "normalized_near_zero": {
+          "n": 744,
+          "MAE": 62.7183,
+          "RMSE": 85.0014,
+          "bias": -22.4808,
+          "common_hours_with_reference": 744,
+          "reference_MAE_on_pair_common_wh": 59.3857,
+          "delta_MAE_vs_winner_wh": 3.3326,
+          "normalized": true,
+          "near_zero": true,
+          "n_train": 3980,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 3980,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 378.8205,
+            "predicted_hours": 744,
+            "missing_scale_hours": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "2017-09_11",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 1695,
+      "drop_annual_calendar": true,
+      "scale_days": 85,
+      "test_days": 91,
+      "scale_min_wh": 102.0216,
+      "scale_max_wh": 433.6072,
+      "variants": {
+        "raw_9_3_winner": {
+          "n": 1695,
+          "MAE": 145.2478,
+          "RMSE": 197.7101,
+          "bias": 60.5887,
+          "common_hours_with_reference": 1695,
+          "reference_MAE_on_pair_common_wh": 145.2478,
+          "delta_MAE_vs_winner_wh": null,
+          "normalized": false,
+          "near_zero": false,
+          "n_train": 4751
+        },
+        "normalized": {
+          "n": 1686,
+          "MAE": 153.6817,
+          "RMSE": 196.8103,
+          "bias": 6.6681,
+          "common_hours_with_reference": 1686,
+          "reference_MAE_on_pair_common_wh": 145.777,
+          "delta_MAE_vs_winner_wh": 7.9047,
+          "normalized": true,
+          "near_zero": false,
+          "n_train": 4724,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 4724,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 376.5645,
+            "predicted_hours": 2040,
+            "missing_scale_hours": 144
+          }
+        },
+        "normalized_near_zero": {
+          "n": 1686,
+          "MAE": 154.8011,
+          "RMSE": 198.2311,
+          "bias": 8.8463,
+          "common_hours_with_reference": 1686,
+          "reference_MAE_on_pair_common_wh": 145.777,
+          "delta_MAE_vs_winner_wh": 9.0241,
+          "normalized": true,
+          "near_zero": true,
+          "n_train": 4724,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 4724,
+            "scale_min_wh": 205.2282,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 376.5645,
+            "predicted_hours": 2040,
+            "missing_scale_hours": 144
+          }
+        }
+      }
+    },
+    {
+      "id": "2017-12",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 548,
+      "drop_annual_calendar": true,
+      "scale_days": 31,
+      "test_days": 31,
+      "scale_min_wh": 23.8739,
+      "scale_max_wh": 258.4635,
+      "variants": {
+        "raw_9_3_winner": {
+          "n": 548,
+          "MAE": 196.3929,
+          "RMSE": 227.8849,
+          "bias": 161.3503,
+          "common_hours_with_reference": 548,
+          "reference_MAE_on_pair_common_wh": 196.3929,
+          "delta_MAE_vs_winner_wh": null,
+          "normalized": false,
+          "near_zero": false,
+          "n_train": 6446
+        },
+        "normalized": {
+          "n": 548,
+          "MAE": 151.7872,
+          "RMSE": 179.7327,
+          "bias": 37.3711,
+          "common_hours_with_reference": 548,
+          "reference_MAE_on_pair_common_wh": 196.3929,
+          "delta_MAE_vs_winner_wh": -44.6057,
+          "normalized": true,
+          "near_zero": false,
+          "n_train": 6410,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 6410,
+            "scale_min_wh": 102.0216,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 356.878,
+            "predicted_hours": 744,
+            "missing_scale_hours": 0
+          }
+        },
+        "normalized_near_zero": {
+          "n": 548,
+          "MAE": 149.4913,
+          "RMSE": 177.7358,
+          "bias": 36.4876,
+          "common_hours_with_reference": 548,
+          "reference_MAE_on_pair_common_wh": 196.3929,
+          "delta_MAE_vs_winner_wh": -46.9016,
+          "normalized": true,
+          "near_zero": true,
+          "n_train": 6410,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 6410,
+            "scale_min_wh": 102.0216,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 356.878,
+            "predicted_hours": 744,
+            "missing_scale_hours": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "2018-05_06",
+      "label": "Stress test (May–Jun 2018)",
+      "stress_test": true,
+      "eval_hours": 182,
+      "drop_annual_calendar": false,
+      "scale_days": 11,
+      "test_days": 35,
+      "scale_min_wh": 40.809,
+      "scale_max_wh": 495.5536,
+      "variants": {
+        "raw_9_3_winner": {
+          "n": 182,
+          "MAE": 108.8664,
+          "RMSE": 143.5573,
+          "bias": -66.86,
+          "common_hours_with_reference": 182,
+          "reference_MAE_on_pair_common_wh": 108.8664,
+          "delta_MAE_vs_winner_wh": null,
+          "normalized": false,
+          "near_zero": false,
+          "n_train": 6994
+        },
+        "normalized": {
+          "n": 182,
+          "MAE": 157.5033,
+          "RMSE": 214.5011,
+          "bias": -120.0975,
+          "common_hours_with_reference": 182,
+          "reference_MAE_on_pair_common_wh": 108.8664,
+          "delta_MAE_vs_winner_wh": 48.6369,
+          "normalized": true,
+          "near_zero": false,
+          "n_train": 6958,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 6958,
+            "scale_min_wh": 23.8739,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 337.5,
+            "predicted_hours": 264,
+            "missing_scale_hours": 576
+          }
+        },
+        "normalized_near_zero": {
+          "n": 182,
+          "MAE": 156.6162,
+          "RMSE": 212.6082,
+          "bias": -117.3283,
+          "common_hours_with_reference": 182,
+          "reference_MAE_on_pair_common_wh": 108.8664,
+          "delta_MAE_vs_winner_wh": 47.7498,
+          "normalized": true,
+          "near_zero": true,
+          "n_train": 6958,
+          "normalization": {
+            "method": "target divided by the trailing 7-day mean ending 1 h before each day's origin",
+            "n_train_scaled": 6958,
+            "scale_min_wh": 23.8739,
+            "scale_max_wh": 481.5002,
+            "scale_mean_wh": 337.5,
+            "predicted_hours": 264,
+            "missing_scale_hours": 576
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "scoring_fold_ids": [
+      "2017-06",
+      "2017-07",
+      "2017-08",
+      "2017-09_11",
+      "2017-12"
+    ],
+    "stress_test_fold_ids": [
+      "2018-05_06"
+    ],
+    "variants": {
+      "normalized": {
+        "folds_helped": 1,
+        "helped_fold_ids": [
+          "2017-12"
+        ],
+        "mean_MAE_wh": 105.2944,
+        "mean_delta_MAE_vs_winner_wh": -2.4732,
+        "delta_MAE_vs_winner_wh": {
+          "2017-06": 17.4634,
+          "2017-07": 3.4219,
+          "2017-08": 3.4496,
+          "2017-09_11": 7.9047,
+          "2017-12": -44.6057
+        },
+        "adopted": false
+      },
+      "normalized_near_zero": {
+        "folds_helped": 1,
+        "helped_fold_ids": [
+          "2017-12"
+        ],
+        "mean_MAE_wh": 104.3952,
+        "mean_delta_MAE_vs_winner_wh": -3.3724,
+        "delta_MAE_vs_winner_wh": {
+          "2017-06": 15.0903,
+          "2017-07": 2.5924,
+          "2017-08": 3.3326,
+          "2017-09_11": 9.0241,
+          "2017-12": -46.9016
+        },
+        "adopted": false
+      }
+    },
+    "winner": "raw_9_3_winner",
+    "winner_config": {
+      "normalized": false,
+      "near_zero": false,
+      "feature_options": "drop_annual_calendar when training <365 days"
+    },
+    "near_zero_note": "The 100 Wh threshold is the existing monthly inactivity threshold reused as an hourly proxy; the fraction is a feature, not evidence that an apartment is vacant."
+  }
+}

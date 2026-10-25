@@ -1,0 +1,452 @@
+{
+  "generated_at": "2026-10-23T23:17:29+05:30",
+  "protocol": {
+    "folds": "expanding window with train_start fixed at the earliest valid target hour (2016-12-14 21:00 IST); five scoring folds test Jun, Jul, Aug, Sep-Nov and Dec 2017; May-Jun 2018 is a stress test excluded from every fold mean",
+    "evaluation_mask": "target present and seasonal_naive_24 available",
+    "feature_options": "9.3 rule applied per fold: drop month/day-of-year when the fold's training span is shorter than 365 days; the 2018 stress fold therefore keeps the full calendar",
+    "tuning": "Optuna TPE, seed 42, 30 trials, three expanding-window CV splits entirely inside each tuning window; the frozen iteration count is the median best iteration across those splits; parameters are then applied unchanged to every fold",
+    "information_set": "the largest window ends 2017-12-31 and therefore contains the Jun-Dec 2017 scoring test periods; the pre-scoring window ends 2017-05-31 and contains none of them",
+    "comparison_mask": "evaluation mask intersected with both models' forecasts so MAE differences are not caused by different coverage",
+    "decision_rule": "tuning counts as helping only if it lowers common-hours MAE on at least 3 of 5 scoring folds; the 2018 stress test is excluded"
+  },
+  "tuning": {
+    "largest": {
+      "train_start": "2016-12-14 21:00",
+      "train_end": "2017-12-31 23:00",
+      "contains_scoring_test_periods": true,
+      "n_train": 6994,
+      "params": {
+        "max_depth": 3,
+        "learning_rate": 0.09389267201326032,
+        "min_child_weight": 6.844126253595815,
+        "subsample": 0.6987469056962589,
+        "colsample_bytree": 0.6727449099791316,
+        "reg_lambda": 0.16786291833236344,
+        "reg_alpha": 0.0015395202564538295,
+        "n_estimators": 72,
+        "objective": "reg:squarederror",
+        "tree_method": "hist",
+        "random_state": 42
+      },
+      "tuning": {
+        "n_trials": 30,
+        "best_cv_mae": 150.6882,
+        "best_params": {
+          "max_depth": 3,
+          "learning_rate": 0.09389267201326032,
+          "min_child_weight": 6.844126253595815,
+          "subsample": 0.6987469056962589,
+          "colsample_bytree": 0.6727449099791316,
+          "reg_lambda": 0.16786291833236344,
+          "reg_alpha": 0.0015395202564538295
+        },
+        "cv_splits": [
+          {
+            "train_start": "2016-12-14 21:00:00+05:30",
+            "train_end": "2017-11-19 23:00:00+05:30",
+            "val_start": "2017-11-20 00:00:00+05:30",
+            "val_end": "2017-12-03 23:00:00+05:30"
+          },
+          {
+            "train_start": "2016-12-14 21:00:00+05:30",
+            "train_end": "2017-12-03 23:00:00+05:30",
+            "val_start": "2017-12-04 00:00:00+05:30",
+            "val_end": "2017-12-17 23:00:00+05:30"
+          },
+          {
+            "train_start": "2016-12-14 21:00:00+05:30",
+            "train_end": "2017-12-17 23:00:00+05:30",
+            "val_start": "2017-12-18 00:00:00+05:30",
+            "val_end": "2017-12-31 23:00:00+05:30"
+          }
+        ],
+        "early_stopping_rounds": 25,
+        "best_iterations": [
+          96,
+          72,
+          66
+        ],
+        "best_iteration": 72,
+        "selection": "median best_iteration across the CV validation slices"
+      }
+    },
+    "pre_scoring": {
+      "train_start": "2016-12-14 21:00",
+      "train_end": "2017-05-31 23:00",
+      "contains_scoring_test_periods": false,
+      "n_train": 2543,
+      "params": {
+        "max_depth": 3,
+        "learning_rate": 0.01899361327091004,
+        "min_child_weight": 17.44142302645991,
+        "subsample": 0.623231219926685,
+        "colsample_bytree": 0.7677136574322302,
+        "reg_lambda": 8.204192175585105,
+        "reg_alpha": 0.7871371146811331,
+        "n_estimators": 150,
+        "objective": "reg:squarederror",
+        "tree_method": "hist",
+        "random_state": 42
+      },
+      "tuning": {
+        "n_trials": 30,
+        "best_cv_mae": 75.9573,
+        "best_params": {
+          "max_depth": 3,
+          "learning_rate": 0.01899361327091004,
+          "min_child_weight": 17.44142302645991,
+          "subsample": 0.623231219926685,
+          "colsample_bytree": 0.7677136574322302,
+          "reg_lambda": 8.204192175585105,
+          "reg_alpha": 0.7871371146811331
+        },
+        "cv_splits": [
+          {
+            "train_start": "2016-12-14 21:00:00+05:30",
+            "train_end": "2017-04-19 23:00:00+05:30",
+            "val_start": "2017-04-20 00:00:00+05:30",
+            "val_end": "2017-05-03 23:00:00+05:30"
+          },
+          {
+            "train_start": "2016-12-14 21:00:00+05:30",
+            "train_end": "2017-05-03 23:00:00+05:30",
+            "val_start": "2017-05-04 00:00:00+05:30",
+            "val_end": "2017-05-17 23:00:00+05:30"
+          },
+          {
+            "train_start": "2016-12-14 21:00:00+05:30",
+            "train_end": "2017-05-17 23:00:00+05:30",
+            "val_start": "2017-05-18 00:00:00+05:30",
+            "val_end": "2017-05-31 23:00:00+05:30"
+          }
+        ],
+        "early_stopping_rounds": 25,
+        "best_iterations": [
+          150,
+          141,
+          191
+        ],
+        "best_iteration": 150,
+        "selection": "median best_iteration across the CV validation slices"
+      }
+    }
+  },
+  "folds": [
+    {
+      "id": "2017-06",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 720,
+      "feature_options": {
+        "drop_annual_calendar": true
+      },
+      "variants": {
+        "untuned_default": {
+          "n": 720,
+          "MAE": 73.5967,
+          "RMSE": 95.8031,
+          "bias": 8.8286,
+          "common_hours_with_untuned": 720,
+          "untuned_MAE_on_pair_common_wh": 73.5967,
+          "delta_MAE_vs_untuned_wh": null,
+          "n_train": 2543,
+          "n_estimators": 400
+        },
+        "frozen_largest": {
+          "n": 720,
+          "MAE": 74.3278,
+          "RMSE": 97.3047,
+          "bias": 10.5065,
+          "common_hours_with_untuned": 720,
+          "untuned_MAE_on_pair_common_wh": 73.5967,
+          "delta_MAE_vs_untuned_wh": 0.7311,
+          "n_train": 2543,
+          "n_estimators": 72
+        },
+        "frozen_pre_scoring": {
+          "n": 720,
+          "MAE": 73.1276,
+          "RMSE": 96.149,
+          "bias": 4.7043,
+          "common_hours_with_untuned": 720,
+          "untuned_MAE_on_pair_common_wh": 73.5967,
+          "delta_MAE_vs_untuned_wh": -0.4691,
+          "n_train": 2543,
+          "n_estimators": 150
+        }
+      }
+    },
+    {
+      "id": "2017-07",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 744,
+      "feature_options": {
+        "drop_annual_calendar": true
+      },
+      "variants": {
+        "untuned_default": {
+          "n": 744,
+          "MAE": 63.686,
+          "RMSE": 84.9989,
+          "bias": 4.5345,
+          "common_hours_with_untuned": 744,
+          "untuned_MAE_on_pair_common_wh": 63.686,
+          "delta_MAE_vs_untuned_wh": null,
+          "n_train": 3263,
+          "n_estimators": 400
+        },
+        "frozen_largest": {
+          "n": 744,
+          "MAE": 63.6918,
+          "RMSE": 84.5767,
+          "bias": 5.6558,
+          "common_hours_with_untuned": 744,
+          "untuned_MAE_on_pair_common_wh": 63.686,
+          "delta_MAE_vs_untuned_wh": 0.0058,
+          "n_train": 3263,
+          "n_estimators": 72
+        },
+        "frozen_pre_scoring": {
+          "n": 744,
+          "MAE": 64.9817,
+          "RMSE": 86.5111,
+          "bias": 5.5506,
+          "common_hours_with_untuned": 744,
+          "untuned_MAE_on_pair_common_wh": 63.686,
+          "delta_MAE_vs_untuned_wh": 1.2957,
+          "n_train": 3263,
+          "n_estimators": 150
+        }
+      }
+    },
+    {
+      "id": "2017-08",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 744,
+      "feature_options": {
+        "drop_annual_calendar": true
+      },
+      "variants": {
+        "untuned_default": {
+          "n": 744,
+          "MAE": 59.3857,
+          "RMSE": 79.5273,
+          "bias": -12.4457,
+          "common_hours_with_untuned": 744,
+          "untuned_MAE_on_pair_common_wh": 59.3857,
+          "delta_MAE_vs_untuned_wh": null,
+          "n_train": 4007,
+          "n_estimators": 400
+        },
+        "frozen_largest": {
+          "n": 744,
+          "MAE": 60.5817,
+          "RMSE": 81.4706,
+          "bias": -13.2257,
+          "common_hours_with_untuned": 744,
+          "untuned_MAE_on_pair_common_wh": 59.3857,
+          "delta_MAE_vs_untuned_wh": 1.196,
+          "n_train": 4007,
+          "n_estimators": 72
+        },
+        "frozen_pre_scoring": {
+          "n": 744,
+          "MAE": 60.2441,
+          "RMSE": 81.4729,
+          "bias": -7.1448,
+          "common_hours_with_untuned": 744,
+          "untuned_MAE_on_pair_common_wh": 59.3857,
+          "delta_MAE_vs_untuned_wh": 0.8584,
+          "n_train": 4007,
+          "n_estimators": 150
+        }
+      }
+    },
+    {
+      "id": "2017-09_11",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 1695,
+      "feature_options": {
+        "drop_annual_calendar": true
+      },
+      "variants": {
+        "untuned_default": {
+          "n": 1695,
+          "MAE": 145.2478,
+          "RMSE": 197.7101,
+          "bias": 60.5887,
+          "common_hours_with_untuned": 1695,
+          "untuned_MAE_on_pair_common_wh": 145.2478,
+          "delta_MAE_vs_untuned_wh": null,
+          "n_train": 4751,
+          "n_estimators": 400
+        },
+        "frozen_largest": {
+          "n": 1695,
+          "MAE": 145.6362,
+          "RMSE": 195.5289,
+          "bias": 52.6704,
+          "common_hours_with_untuned": 1695,
+          "untuned_MAE_on_pair_common_wh": 145.2478,
+          "delta_MAE_vs_untuned_wh": 0.3884,
+          "n_train": 4751,
+          "n_estimators": 72
+        },
+        "frozen_pre_scoring": {
+          "n": 1695,
+          "MAE": 144.006,
+          "RMSE": 194.1742,
+          "bias": 61.7794,
+          "common_hours_with_untuned": 1695,
+          "untuned_MAE_on_pair_common_wh": 145.2478,
+          "delta_MAE_vs_untuned_wh": -1.2418,
+          "n_train": 4751,
+          "n_estimators": 150
+        }
+      }
+    },
+    {
+      "id": "2017-12",
+      "label": null,
+      "stress_test": false,
+      "eval_hours": 548,
+      "feature_options": {
+        "drop_annual_calendar": true
+      },
+      "variants": {
+        "untuned_default": {
+          "n": 548,
+          "MAE": 196.3929,
+          "RMSE": 227.8849,
+          "bias": 161.3503,
+          "common_hours_with_untuned": 548,
+          "untuned_MAE_on_pair_common_wh": 196.3929,
+          "delta_MAE_vs_untuned_wh": null,
+          "n_train": 6446,
+          "n_estimators": 400
+        },
+        "frozen_largest": {
+          "n": 548,
+          "MAE": 171.6891,
+          "RMSE": 198.7979,
+          "bias": 128.7401,
+          "common_hours_with_untuned": 548,
+          "untuned_MAE_on_pair_common_wh": 196.3929,
+          "delta_MAE_vs_untuned_wh": -24.7038,
+          "n_train": 6446,
+          "n_estimators": 72
+        },
+        "frozen_pre_scoring": {
+          "n": 548,
+          "MAE": 168.0811,
+          "RMSE": 189.3416,
+          "bias": 133.219,
+          "common_hours_with_untuned": 548,
+          "untuned_MAE_on_pair_common_wh": 196.3929,
+          "delta_MAE_vs_untuned_wh": -28.3118,
+          "n_train": 6446,
+          "n_estimators": 150
+        }
+      }
+    },
+    {
+      "id": "2018-05_06",
+      "label": "Stress test (May–Jun 2018)",
+      "stress_test": true,
+      "eval_hours": 182,
+      "feature_options": {
+        "drop_annual_calendar": false,
+        "use_weather": true,
+        "oracle_temperature": false
+      },
+      "variants": {
+        "untuned_default": {
+          "n": 182,
+          "MAE": 108.8664,
+          "RMSE": 143.5573,
+          "bias": -66.86,
+          "common_hours_with_untuned": 182,
+          "untuned_MAE_on_pair_common_wh": 108.8664,
+          "delta_MAE_vs_untuned_wh": null,
+          "n_train": 6994,
+          "n_estimators": 400
+        },
+        "frozen_largest": {
+          "n": 182,
+          "MAE": 110.0069,
+          "RMSE": 146.2619,
+          "bias": -76.9871,
+          "common_hours_with_untuned": 182,
+          "untuned_MAE_on_pair_common_wh": 108.8664,
+          "delta_MAE_vs_untuned_wh": 1.1405,
+          "n_train": 6994,
+          "n_estimators": 72
+        },
+        "frozen_pre_scoring": {
+          "n": 182,
+          "MAE": 112.6961,
+          "RMSE": 150.1012,
+          "bias": -75.5211,
+          "common_hours_with_untuned": 182,
+          "untuned_MAE_on_pair_common_wh": 108.8664,
+          "delta_MAE_vs_untuned_wh": 3.8297,
+          "n_train": 6994,
+          "n_estimators": 150
+        }
+      }
+    }
+  ],
+  "summary": {
+    "scoring_fold_ids": [
+      "2017-06",
+      "2017-07",
+      "2017-08",
+      "2017-09_11",
+      "2017-12"
+    ],
+    "stress_test_fold_ids": [
+      "2018-05_06"
+    ],
+    "variants": {
+      "frozen_largest": {
+        "folds_helped": 1,
+        "helped_fold_ids": [
+          "2017-12"
+        ],
+        "mean_MAE_wh": 103.1853,
+        "mean_delta_MAE_vs_untuned_wh": -4.4765,
+        "delta_MAE_vs_untuned_wh": {
+          "2017-06": 0.7311,
+          "2017-07": 0.0058,
+          "2017-08": 1.196,
+          "2017-09_11": 0.3884,
+          "2017-12": -24.7038
+        },
+        "helps_at_all": false
+      },
+      "frozen_pre_scoring": {
+        "folds_helped": 3,
+        "helped_fold_ids": [
+          "2017-06",
+          "2017-09_11",
+          "2017-12"
+        ],
+        "mean_MAE_wh": 102.0881,
+        "mean_delta_MAE_vs_untuned_wh": -5.5737,
+        "delta_MAE_vs_untuned_wh": {
+          "2017-06": -0.4691,
+          "2017-07": 1.2957,
+          "2017-08": 0.8584,
+          "2017-09_11": -1.2418,
+          "2017-12": -28.3118
+        },
+        "helps_at_all": true
+      }
+    },
+    "winner": "frozen_pre_scoring",
+    "decision": "the requested largest-window parameters help on only 1/5 scoring folds, and that window contains the scoring test periods; the clean pre-scoring tuning helps on 3/5, so use its frozen parameters"
+  }
+}

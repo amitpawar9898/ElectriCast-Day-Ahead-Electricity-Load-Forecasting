@@ -1,0 +1,1000 @@
+{
+  "generated_at": "2026-10-23T18:10:05+05:30",
+  "source": {
+    "data_dir": "data",
+    "files_found": 39,
+    "files_read": 39,
+    "files_failed": 0,
+    "rows_total": 196449,
+    "first_utc": "2016-12-14T15:30:00+00:00",
+    "last_utc": "2018-06-04T18:00:00+00:00",
+    "first_ist": "2016-12-14T21:00:00+05:30",
+    "last_ist": "2018-06-04T23:30:00+05:30",
+    "errors": [],
+    "files": [
+      {
+        "file": "1.csv",
+        "rows": 7508,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "10.csv",
+        "rows": 7508,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "11.csv",
+        "rows": 7501,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "12.csv",
+        "rows": 6928,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "13.csv",
+        "rows": 37,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2017-11-27T09:30:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2017-11-27T15:00:00+05:30"
+      },
+      {
+        "file": "14.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "15.csv",
+        "rows": 5334,
+        "first_utc": "2016-12-15T05:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-15T11:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "16.csv",
+        "rows": 6403,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "17.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "18.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "19.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "2.csv",
+        "rows": 6042,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "20.csv",
+        "rows": 650,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "21.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "22.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "23.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "24.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "25.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "26.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "27.csv",
+        "rows": 765,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "28.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "29.csv",
+        "rows": 7114,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "3.csv",
+        "rows": 7425,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "30.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "31.csv",
+        "rows": 7089,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "32.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "33.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "34.csv",
+        "rows": 7158,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "35.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "36.csv",
+        "rows": 7315,
+        "first_utc": "2016-12-19T11:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-19T17:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "37.csv",
+        "rows": 7509,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "38.csv",
+        "rows": 7478,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "39.csv",
+        "rows": 799,
+        "first_utc": "2017-11-25T21:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2017-11-26T03:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "4.csv",
+        "rows": 7425,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "5.csv",
+        "rows": 7422,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "6.csv",
+        "rows": 7480,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "7.csv",
+        "rows": 7462,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "8.csv",
+        "rows": 7508,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      },
+      {
+        "file": "9.csv",
+        "rows": 7508,
+        "first_utc": "2016-12-14T15:30:00+00:00",
+        "last_utc": "2018-06-04T18:00:00+00:00",
+        "first_ist": "2016-12-14T21:00:00+05:30",
+        "last_ist": "2018-06-04T23:30:00+05:30"
+      }
+    ]
+  },
+  "panel": {
+    "timezone": "Asia/Kolkata",
+    "hours": 12891,
+    "apartments": 39,
+    "first_ist": "2016-12-14T21:00:00+05:30",
+    "last_ist": "2018-06-04T23:00:00+05:30",
+    "hours_any_data": 7600,
+    "hours_zero_reporting": 5291,
+    "reporting_median": 23,
+    "reporting_max": 39
+  },
+  "stable_panel": {
+    "window_start": "2017-05-01",
+    "window_end": "2017-11-30 23:00",
+    "min_coverage": 0.9,
+    "count": 24,
+    "apartments": [
+      {
+        "apartment": "32",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "33",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "34",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "36",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "28",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "29",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "21",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "35",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "30",
+        "coverage": 0.91472
+      },
+      {
+        "apartment": "5",
+        "coverage": 0.910241
+      },
+      {
+        "apartment": "4",
+        "coverage": 0.910241
+      },
+      {
+        "apartment": "3",
+        "coverage": 0.910241
+      },
+      {
+        "apartment": "2",
+        "coverage": 0.910241
+      },
+      {
+        "apartment": "1",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "10",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "9",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "6",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "8",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "37",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "31",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "16",
+        "coverage": 0.910047
+      },
+      {
+        "apartment": "11",
+        "coverage": 0.908684
+      },
+      {
+        "apartment": "38",
+        "coverage": 0.904206
+      },
+      {
+        "apartment": "7",
+        "coverage": 0.90109
+      },
+      {
+        "apartment": "15",
+        "coverage": 0.890187
+      },
+      {
+        "apartment": "12",
+        "coverage": 0.839369
+      },
+      {
+        "apartment": "14",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "17",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "24",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "27",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "22",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "23",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "19",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "25",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "26",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "20",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "18",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "39",
+        "coverage": 0.02278
+      },
+      {
+        "apartment": "13",
+        "coverage": 0.007204
+      }
+    ],
+    "excluded": [
+      "15",
+      "12",
+      "14",
+      "17",
+      "24",
+      "27",
+      "22",
+      "23",
+      "19",
+      "25",
+      "26",
+      "20",
+      "18",
+      "39",
+      "13"
+    ]
+  },
+  "target": {
+    "valid_hours_before_gaps": 7600,
+    "valid_hours": 7683,
+    "imputed_hours": 83,
+    "excluded_hours": 5208,
+    "gap_runs": 66,
+    "short_runs": 35,
+    "excluded_runs": 31,
+    "max_gap_hours": 6,
+    "longest_gap_hours": 3514,
+    "mean_wh": 333.4963,
+    "min_wh": 0.144,
+    "max_wh": 2001.1192,
+    "longest_runs": [
+      {
+        "start": "2017-12-28T14:00:00+05:30",
+        "end": "2018-05-23T23:00:00+05:30",
+        "hours": 3514,
+        "edge": false
+      },
+      {
+        "start": "2017-09-04T07:00:00+05:30",
+        "end": "2017-09-15T14:00:00+05:30",
+        "hours": 272,
+        "edge": false
+      },
+      {
+        "start": "2017-03-30T14:00:00+05:30",
+        "end": "2017-04-06T14:00:00+05:30",
+        "hours": 169,
+        "edge": false
+      },
+      {
+        "start": "2017-04-12T18:00:00+05:30",
+        "end": "2017-04-19T15:00:00+05:30",
+        "hours": 166,
+        "edge": false
+      },
+      {
+        "start": "2017-02-14T14:00:00+05:30",
+        "end": "2017-02-20T15:00:00+05:30",
+        "hours": 146,
+        "edge": false
+      },
+      {
+        "start": "2017-01-25T05:00:00+05:30",
+        "end": "2017-01-30T17:00:00+05:30",
+        "hours": 133,
+        "edge": false
+      },
+      {
+        "start": "2017-02-24T11:00:00+05:30",
+        "end": "2017-02-28T13:00:00+05:30",
+        "hours": 99,
+        "edge": false
+      },
+      {
+        "start": "2017-01-17T14:00:00+05:30",
+        "end": "2017-01-20T15:00:00+05:30",
+        "hours": 74,
+        "edge": false
+      },
+      {
+        "start": "2018-06-01T14:00:00+05:30",
+        "end": "2018-06-04T15:00:00+05:30",
+        "hours": 74,
+        "edge": false
+      },
+      {
+        "start": "2016-12-16T17:00:00+05:30",
+        "end": "2016-12-19T16:00:00+05:30",
+        "hours": 72,
+        "edge": false
+      }
+    ]
+  },
+  "monthly_coverage": [
+    {
+      "month": "2016-12",
+      "hours": 411,
+      "apartments_reporting": 26,
+      "target_hours": 317
+    },
+    {
+      "month": "2017-01",
+      "hours": 744,
+      "apartments_reporting": 26,
+      "target_hours": 412
+    },
+    {
+      "month": "2017-02",
+      "hours": 672,
+      "apartments_reporting": 23,
+      "target_hours": 393
+    },
+    {
+      "month": "2017-03",
+      "hours": 744,
+      "apartments_reporting": 26,
+      "target_hours": 636
+    },
+    {
+      "month": "2017-04",
+      "hours": 720,
+      "apartments_reporting": 25,
+      "target_hours": 385
+    },
+    {
+      "month": "2017-05",
+      "hours": 744,
+      "apartments_reporting": 26,
+      "target_hours": 744
+    },
+    {
+      "month": "2017-06",
+      "hours": 720,
+      "apartments_reporting": 26,
+      "target_hours": 720
+    },
+    {
+      "month": "2017-07",
+      "hours": 744,
+      "apartments_reporting": 26,
+      "target_hours": 744
+    },
+    {
+      "month": "2017-08",
+      "hours": 744,
+      "apartments_reporting": 26,
+      "target_hours": 744
+    },
+    {
+      "month": "2017-09",
+      "hours": 720,
+      "apartments_reporting": 26,
+      "target_hours": 448
+    },
+    {
+      "month": "2017-10",
+      "hours": 744,
+      "apartments_reporting": 26,
+      "target_hours": 613
+    },
+    {
+      "month": "2017-11",
+      "hours": 720,
+      "apartments_reporting": 39,
+      "target_hours": 720
+    },
+    {
+      "month": "2017-12",
+      "hours": 744,
+      "apartments_reporting": 38,
+      "target_hours": 593
+    },
+    {
+      "month": "2018-01",
+      "hours": 744,
+      "apartments_reporting": 0,
+      "target_hours": 0
+    },
+    {
+      "month": "2018-02",
+      "hours": 672,
+      "apartments_reporting": 0,
+      "target_hours": 0
+    },
+    {
+      "month": "2018-03",
+      "hours": 744,
+      "apartments_reporting": 0,
+      "target_hours": 0
+    },
+    {
+      "month": "2018-04",
+      "hours": 720,
+      "apartments_reporting": 0,
+      "target_hours": 0
+    },
+    {
+      "month": "2018-05",
+      "hours": 744,
+      "apartments_reporting": 38,
+      "target_hours": 192
+    },
+    {
+      "month": "2018-06",
+      "hours": 96,
+      "apartments_reporting": 38,
+      "target_hours": 22
+    }
+  ],
+  "inactive": {
+    "month": "2017-12",
+    "threshold_wh": 100.0,
+    "min_hours": 24,
+    "flagged": [
+      "30",
+      "2",
+      "14",
+      "31",
+      "27",
+      "9",
+      "1",
+      "24",
+      "7",
+      "5",
+      "4",
+      "6",
+      "22",
+      "18",
+      "3",
+      "15",
+      "10",
+      "23",
+      "38",
+      "39",
+      "8"
+    ],
+    "flagged_stable": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "30",
+      "31",
+      "38"
+    ],
+    "apartments": [
+      {
+        "apartment": "30",
+        "mean_wh": 0.0692,
+        "hours": 514,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "2",
+        "mean_wh": 0.3801,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "14",
+        "mean_wh": 0.4408,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "31",
+        "mean_wh": 0.9773,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "27",
+        "mean_wh": 31.6573,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "9",
+        "mean_wh": 35.7314,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "1",
+        "mean_wh": 52.405,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "24",
+        "mean_wh": 59.5476,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "7",
+        "mean_wh": 63.3705,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "5",
+        "mean_wh": 66.3186,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "4",
+        "mean_wh": 66.4768,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "6",
+        "mean_wh": 68.4138,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "22",
+        "mean_wh": 69.0509,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "18",
+        "mean_wh": 69.3123,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "3",
+        "mean_wh": 69.7064,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "15",
+        "mean_wh": 74.4637,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "10",
+        "mean_wh": 82.6427,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "23",
+        "mean_wh": 85.9107,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "38",
+        "mean_wh": 87.1979,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "39",
+        "mean_wh": 88.7521,
+        "hours": 469,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "8",
+        "mean_wh": 89.8602,
+        "hours": 579,
+        "suspect_inactive": true
+      },
+      {
+        "apartment": "11",
+        "mean_wh": 100.4971,
+        "hours": 579,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "34",
+        "mean_wh": 101.2074,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "12",
+        "mean_wh": 102.5545,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "25",
+        "mean_wh": 116.0282,
+        "hours": 469,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "32",
+        "mean_wh": 130.4351,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "19",
+        "mean_wh": 136.6404,
+        "hours": 469,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "37",
+        "mean_wh": 137.2545,
+        "hours": 579,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "28",
+        "mean_wh": 139.1846,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "21",
+        "mean_wh": 141.7413,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "16",
+        "mean_wh": 144.0399,
+        "hours": 469,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "20",
+        "mean_wh": 148.9302,
+        "hours": 320,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "36",
+        "mean_wh": 154.9105,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "35",
+        "mean_wh": 155.0835,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "29",
+        "mean_wh": 169.0375,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "17",
+        "mean_wh": 188.8665,
+        "hours": 469,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "26",
+        "mean_wh": 255.1003,
+        "hours": 469,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "33",
+        "mean_wh": 347.9071,
+        "hours": 514,
+        "suspect_inactive": false
+      },
+      {
+        "apartment": "13",
+        "mean_wh": null,
+        "hours": 0,
+        "suspect_inactive": false
+      }
+    ]
+  },
+  "notes": [
+    "Raw files: 39 read, 0 failed; 196,449 rows from 2016-12-14T21:00:00+05:30 to 2018-06-04T23:30:00+05:30 IST.",
+    "The hourly panel covers 12,891 IST hours and 39 apartments; 5,291 hours have no readings.",
+    "Stable window 2017-05-01 to 2017-11-30 23:00: 24 of 39 apartments have at least 90% hourly coverage.",
+    "Gaps: 83 hours in runs of at most 6 h were interpolated; 5,208 hours in 31 longer or edge runs are excluded from training and evaluation.",
+    "December 2017: 21 apartments average below 100 Wh/h (including 13 of the 24 stable apartments); this is flagged as suspect inactivity, likely vacancy, not confirmed meter failure.",
+    "Rows stamped at :00 UTC, including the May-2018 block, are converted to IST and floored to the containing hour; no apartment-hour bucket is duplicated."
+  ]
+}

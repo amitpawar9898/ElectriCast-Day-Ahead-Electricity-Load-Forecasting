@@ -1,0 +1,455 @@
+{
+  "generated_at": "2026-10-23T23:02:43+05:30",
+  "protocol": {
+    "folds": "expanding window with train_start fixed at the earliest valid target hour (2016-12-14 21:00 IST); five scoring folds test Jun, Jul, Aug, Sep-Nov and Dec 2017; May-Jun 2018 is a stress test excluded from every fold mean",
+    "evaluation_mask": "target present and seasonal_naive_24 available",
+    "config": "untuned forecast_model.DEFAULT_PARAMS, identical across variants",
+    "calendar_rule": "drop month, doy_sin and doy_cos only when the training window spans fewer than 365 days",
+    "weather": "lagged >=24 h in full and no_annual_calendar; omitted in no_weather; target-hour temperature in ORACLE only",
+    "help_rule": "strictly lower MAE than the full-feature model on a scoring fold; keep a real variant only if it helps on at least 3 of 5 scoring folds"
+  },
+  "config": {
+    "n_estimators": 400,
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "min_child_weight": 8,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 2.0,
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "folds": [
+    {
+      "id": "2017-06",
+      "label": null,
+      "stress_test": false,
+      "train": {
+        "start": "2016-12-14 21:00",
+        "end": "2017-05-31 23:00",
+        "valid_hours": 2887,
+        "less_than_12_months": true
+      },
+      "eval_hours": 720,
+      "variants": {
+        "full": {
+          "applied": true,
+          "oracle": false,
+          "n": 720,
+          "MAE": 74.1219,
+          "RMSE": 96.9847,
+          "bias": 16.1698,
+          "n_train": 2543,
+          "n_features": 48,
+          "delta_MAE_vs_full_wh": 0.0
+        },
+        "no_annual_calendar": {
+          "applied": true,
+          "oracle": false,
+          "n": 720,
+          "MAE": 73.5967,
+          "RMSE": 95.8031,
+          "bias": 8.8286,
+          "n_train": 2543,
+          "n_features": 45,
+          "delta_MAE_vs_full_wh": -0.5252
+        },
+        "no_weather": {
+          "applied": true,
+          "oracle": false,
+          "n": 720,
+          "MAE": 75.2615,
+          "RMSE": 98.2278,
+          "bias": 15.1762,
+          "n_train": 2543,
+          "n_features": 40,
+          "delta_MAE_vs_full_wh": 1.1396
+        },
+        "oracle_same_hour_temperature": {
+          "applied": true,
+          "oracle": true,
+          "n": 720,
+          "MAE": 75.526,
+          "RMSE": 98.373,
+          "bias": 18.1635,
+          "n_train": 2543,
+          "n_features": 49,
+          "delta_MAE_vs_full_wh": 1.4041
+        }
+      }
+    },
+    {
+      "id": "2017-07",
+      "label": null,
+      "stress_test": false,
+      "train": {
+        "start": "2016-12-14 21:00",
+        "end": "2017-06-30 23:00",
+        "valid_hours": 3607,
+        "less_than_12_months": true
+      },
+      "eval_hours": 744,
+      "variants": {
+        "full": {
+          "applied": true,
+          "oracle": false,
+          "n": 744,
+          "MAE": 63.478,
+          "RMSE": 84.3869,
+          "bias": -0.9896,
+          "n_train": 3263,
+          "n_features": 48,
+          "delta_MAE_vs_full_wh": 0.0
+        },
+        "no_annual_calendar": {
+          "applied": true,
+          "oracle": false,
+          "n": 744,
+          "MAE": 63.686,
+          "RMSE": 84.9989,
+          "bias": 4.5345,
+          "n_train": 3263,
+          "n_features": 45,
+          "delta_MAE_vs_full_wh": 0.208
+        },
+        "no_weather": {
+          "applied": true,
+          "oracle": false,
+          "n": 744,
+          "MAE": 63.8694,
+          "RMSE": 84.7586,
+          "bias": -2.5925,
+          "n_train": 3263,
+          "n_features": 40,
+          "delta_MAE_vs_full_wh": 0.3914
+        },
+        "oracle_same_hour_temperature": {
+          "applied": true,
+          "oracle": true,
+          "n": 744,
+          "MAE": 63.2981,
+          "RMSE": 84.608,
+          "bias": -1.9055,
+          "n_train": 3263,
+          "n_features": 49,
+          "delta_MAE_vs_full_wh": -0.1799
+        }
+      }
+    },
+    {
+      "id": "2017-08",
+      "label": null,
+      "stress_test": false,
+      "train": {
+        "start": "2016-12-14 21:00",
+        "end": "2017-07-31 23:00",
+        "valid_hours": 4351,
+        "less_than_12_months": true
+      },
+      "eval_hours": 744,
+      "variants": {
+        "full": {
+          "applied": true,
+          "oracle": false,
+          "n": 744,
+          "MAE": 59.878,
+          "RMSE": 80.3714,
+          "bias": -18.831,
+          "n_train": 4007,
+          "n_features": 48,
+          "delta_MAE_vs_full_wh": 0.0
+        },
+        "no_annual_calendar": {
+          "applied": true,
+          "oracle": false,
+          "n": 744,
+          "MAE": 59.3857,
+          "RMSE": 79.5273,
+          "bias": -12.4457,
+          "n_train": 4007,
+          "n_features": 45,
+          "delta_MAE_vs_full_wh": -0.4923
+        },
+        "no_weather": {
+          "applied": true,
+          "oracle": false,
+          "n": 744,
+          "MAE": 61.087,
+          "RMSE": 80.966,
+          "bias": -24.9296,
+          "n_train": 4007,
+          "n_features": 40,
+          "delta_MAE_vs_full_wh": 1.209
+        },
+        "oracle_same_hour_temperature": {
+          "applied": true,
+          "oracle": true,
+          "n": 744,
+          "MAE": 59.5347,
+          "RMSE": 79.8431,
+          "bias": -19.2162,
+          "n_train": 4007,
+          "n_features": 49,
+          "delta_MAE_vs_full_wh": -0.3433
+        }
+      }
+    },
+    {
+      "id": "2017-09_11",
+      "label": null,
+      "stress_test": false,
+      "train": {
+        "start": "2016-12-14 21:00",
+        "end": "2017-08-31 23:00",
+        "valid_hours": 5095,
+        "less_than_12_months": true
+      },
+      "eval_hours": 1695,
+      "variants": {
+        "full": {
+          "applied": true,
+          "oracle": false,
+          "n": 1695,
+          "MAE": 145.3175,
+          "RMSE": 198.1798,
+          "bias": 67.4708,
+          "n_train": 4751,
+          "n_features": 48,
+          "delta_MAE_vs_full_wh": 0.0
+        },
+        "no_annual_calendar": {
+          "applied": true,
+          "oracle": false,
+          "n": 1695,
+          "MAE": 145.2478,
+          "RMSE": 197.7101,
+          "bias": 60.5887,
+          "n_train": 4751,
+          "n_features": 45,
+          "delta_MAE_vs_full_wh": -0.0697
+        },
+        "no_weather": {
+          "applied": true,
+          "oracle": false,
+          "n": 1695,
+          "MAE": 143.5448,
+          "RMSE": 195.8326,
+          "bias": 64.425,
+          "n_train": 4751,
+          "n_features": 40,
+          "delta_MAE_vs_full_wh": -1.7727
+        },
+        "oracle_same_hour_temperature": {
+          "applied": true,
+          "oracle": true,
+          "n": 1695,
+          "MAE": 146.1764,
+          "RMSE": 199.1576,
+          "bias": 68.1903,
+          "n_train": 4751,
+          "n_features": 49,
+          "delta_MAE_vs_full_wh": 0.8589
+        }
+      }
+    },
+    {
+      "id": "2017-12",
+      "label": null,
+      "stress_test": false,
+      "train": {
+        "start": "2016-12-14 21:00",
+        "end": "2017-11-30 23:00",
+        "valid_hours": 6876,
+        "less_than_12_months": true
+      },
+      "eval_hours": 548,
+      "variants": {
+        "full": {
+          "applied": true,
+          "oracle": false,
+          "n": 548,
+          "MAE": 227.6746,
+          "RMSE": 258.4865,
+          "bias": 199.5882,
+          "n_train": 6446,
+          "n_features": 48,
+          "delta_MAE_vs_full_wh": 0.0
+        },
+        "no_annual_calendar": {
+          "applied": true,
+          "oracle": false,
+          "n": 548,
+          "MAE": 196.3929,
+          "RMSE": 227.8849,
+          "bias": 161.3503,
+          "n_train": 6446,
+          "n_features": 45,
+          "delta_MAE_vs_full_wh": -31.2817
+        },
+        "no_weather": {
+          "applied": true,
+          "oracle": false,
+          "n": 548,
+          "MAE": 215.1116,
+          "RMSE": 250.3652,
+          "bias": 182.3291,
+          "n_train": 6446,
+          "n_features": 40,
+          "delta_MAE_vs_full_wh": -12.563
+        },
+        "oracle_same_hour_temperature": {
+          "applied": true,
+          "oracle": true,
+          "n": 548,
+          "MAE": 219.4439,
+          "RMSE": 249.6983,
+          "bias": 191.2864,
+          "n_train": 6446,
+          "n_features": 49,
+          "delta_MAE_vs_full_wh": -8.2307
+        }
+      }
+    },
+    {
+      "id": "2018-05_06",
+      "label": "Stress test (May–Jun 2018)",
+      "stress_test": true,
+      "train": {
+        "start": "2016-12-14 21:00",
+        "end": "2017-12-31 23:00",
+        "valid_hours": 7469,
+        "less_than_12_months": false
+      },
+      "eval_hours": 182,
+      "variants": {
+        "full": {
+          "applied": true,
+          "oracle": false,
+          "n": 182,
+          "MAE": 108.8664,
+          "RMSE": 143.5573,
+          "bias": -66.86,
+          "n_train": 6994,
+          "n_features": 48,
+          "delta_MAE_vs_full_wh": 0.0
+        },
+        "no_annual_calendar": {
+          "applied": false,
+          "oracle": false,
+          "note": "training window spans at least 12 months; full calendar retained",
+          "n": 182,
+          "MAE": 108.8664,
+          "RMSE": 143.5573,
+          "bias": -66.86,
+          "delta_MAE_vs_full_wh": null
+        },
+        "no_weather": {
+          "applied": true,
+          "oracle": false,
+          "n": 182,
+          "MAE": 99.7548,
+          "RMSE": 132.9815,
+          "bias": -47.7298,
+          "n_train": 6994,
+          "n_features": 40,
+          "delta_MAE_vs_full_wh": -9.1116
+        },
+        "oracle_same_hour_temperature": {
+          "applied": true,
+          "oracle": true,
+          "n": 182,
+          "MAE": 104.836,
+          "RMSE": 139.1924,
+          "bias": -62.3976,
+          "n_train": 6994,
+          "n_features": 49,
+          "delta_MAE_vs_full_wh": -4.0304
+        }
+      }
+    }
+  ],
+  "summary": {
+    "scoring_fold_ids": [
+      "2017-06",
+      "2017-07",
+      "2017-08",
+      "2017-09_11",
+      "2017-12"
+    ],
+    "stress_test_fold_ids": [
+      "2018-05_06"
+    ],
+    "full_mean_MAE_wh": 114.094,
+    "variants": {
+      "no_annual_calendar": {
+        "applied_scoring_folds": 5,
+        "folds_helped": 4,
+        "helped_fold_ids": [
+          "2017-06",
+          "2017-08",
+          "2017-09_11",
+          "2017-12"
+        ],
+        "delta_MAE_vs_full_wh": {
+          "2017-06": -0.5252,
+          "2017-07": 0.208,
+          "2017-08": -0.4923,
+          "2017-09_11": -0.0697,
+          "2017-12": -31.2817
+        },
+        "mean_MAE_wh": 107.6618,
+        "mean_delta_MAE_vs_full_wh": -6.4322,
+        "kept": true,
+        "diagnostic_only": false
+      },
+      "no_weather": {
+        "applied_scoring_folds": 5,
+        "folds_helped": 2,
+        "helped_fold_ids": [
+          "2017-09_11",
+          "2017-12"
+        ],
+        "delta_MAE_vs_full_wh": {
+          "2017-06": 1.1396,
+          "2017-07": 0.3914,
+          "2017-08": 1.209,
+          "2017-09_11": -1.7727,
+          "2017-12": -12.563
+        },
+        "mean_MAE_wh": 111.7749,
+        "mean_delta_MAE_vs_full_wh": -2.3191,
+        "kept": false,
+        "diagnostic_only": false
+      },
+      "oracle_same_hour_temperature": {
+        "applied_scoring_folds": 5,
+        "folds_helped": 3,
+        "helped_fold_ids": [
+          "2017-07",
+          "2017-08",
+          "2017-12"
+        ],
+        "delta_MAE_vs_full_wh": {
+          "2017-06": 1.4041,
+          "2017-07": -0.1799,
+          "2017-08": -0.3433,
+          "2017-09_11": 0.8589,
+          "2017-12": -8.2307
+        },
+        "mean_MAE_wh": 112.7958,
+        "mean_delta_MAE_vs_full_wh": -1.2982,
+        "kept": false,
+        "diagnostic_only": true
+      }
+    },
+    "kept_variants": [
+      "no_annual_calendar"
+    ],
+    "winner": "no_annual_calendar",
+    "winner_feature_options": {
+      "drop_annual_calendar": true
+    },
+    "oracle_warning": "oracle_same_hour_temperature uses target-hour temperature, which is not known at the 00:00 IST origin. It bounds the value of same-day weather and is never a deployable result: it cannot be kept or become the winner."
+  }
+}
